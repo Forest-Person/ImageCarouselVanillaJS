@@ -1,0 +1,1 @@
+(()=>{console.log("hello world");const o=document.querySelector(".content"),e=document.createElement("p");o.appendChild(e),e.textContent="poooooop"})();
