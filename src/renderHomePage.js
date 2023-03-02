@@ -1,3 +1,7 @@
+import arrowBackwards from './images/arrowBack.png'
+import arrowForwards from './images/arrowForward.png'
+
+
 const homePage = () => {
 
      const homePageHtml = `
@@ -9,13 +13,16 @@ const homePage = () => {
 
         <div class = 'mainImageDiv'>
 
+        <img  src = ${arrowBackwards}/>
+        <img src = ${arrowForwards}/> 
+
 
             </div>
 
         
         
         <div class = 'tinyImagePreview'>
-
+            
 
             </div>
 
@@ -54,8 +61,12 @@ const homePage = () => {
     const restOf = imageArray.slice(1)///append the rest of the images to the tinyImagePreview div which will be below.
     for(let item in restOf){tinyImagePreview.append(restOf[item])}
     
-    console.log(restOf)
+   
 
+    
+    
+    console.log(restOf)
+    
      
 
 }
