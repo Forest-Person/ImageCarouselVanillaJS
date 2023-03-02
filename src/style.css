@@ -12,3 +12,20 @@
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
 }
+
+img {
+    
+    
+    
+    max-width: 100%;
+    object-fit: cover;
+    width: 25rem;
+    height: 25rem;
+}
+
+.imgDiv {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
