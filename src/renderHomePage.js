@@ -32,7 +32,7 @@ const homePage = () => {
      content.insertAdjacentHTML('afterbegin', homePageHtml)
      const mainImageDiv = document.querySelector('.mainImageDiv')
 
-     
+    const imageArray = [] //image array that stores the images we will be showing in the main image div.
 
      for(let i = 0; i<5; i++){
 
@@ -41,9 +41,12 @@ const homePage = () => {
 
 
  
-        let image = document.createElement('img')
+        let image = document.createElement(`img`)
         image.src = url;
-        mainImageDiv.appendChild(image);
+        
+        imageArray.push(image)
+        console.log(imageArray)
+        mainImageDiv.appendChild(imageArray[0]);
    
 
      }
