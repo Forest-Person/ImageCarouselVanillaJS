@@ -23,9 +23,3 @@ img {
     height: 25rem;
 }
 
-.imgDiv {
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}

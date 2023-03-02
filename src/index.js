@@ -3,7 +3,7 @@ import { homePage } from './renderHomePage'
 
 
 
-console.log('hello world')
+
 
 homePage()
 
