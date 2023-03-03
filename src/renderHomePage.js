@@ -13,8 +13,8 @@ const homePage = () => {
 
         <div class = 'mainImageDiv'>
 
-        <img  src = ${arrowBackwards}/>
-        <img src = ${arrowForwards}/> 
+        <img class = 'backArrow'  src = ${arrowBackwards} />
+        <img class = 'forwardArrow' src = ${arrowForwards} /> 
 
 
             </div>
@@ -50,8 +50,10 @@ const homePage = () => {
  
         let image = document.createElement(`img`)
         image.src = url;
+        image.classList.add('randomImage')
         
         imageArray.push(image)
+        
         console.log(imageArray)
         mainImageDiv.appendChild(imageArray[0]); //only the zeroth image will occupy the main image div.
         

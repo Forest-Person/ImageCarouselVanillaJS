@@ -21,7 +21,17 @@
 }
 
 
-.mainImageDiv img {
+
+
+.mainImageDiv {
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+
+.mainImageDiv .randomImage {
     
     
     
@@ -47,13 +57,7 @@
 
 }
 
-.mainImageDiv {
-    position:relative;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 5rem;
-}
+
 
 .tinyImagePreview {
 
@@ -63,3 +67,17 @@
     align-items: center;
 }
 
+.backArrow {
+position:absolute;
+width:3.5rem;
+right:90%;
+
+}
+
+.forwardArrow {
+position:absolute;
+width:3.5rem;
+left:90%
+
+
+}
