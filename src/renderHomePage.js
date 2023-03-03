@@ -13,8 +13,10 @@ const homePage = () => {
 
         <div class = 'mainImageDiv'>
 
-        <img class = 'backArrow'  src = ${arrowBackwards} />
-        <img class = 'forwardArrow' src = ${arrowForwards} /> 
+            <img class = 'backArrow'  src = ${arrowBackwards} />
+
+            
+            <img class = 'forwardArrow' src = ${arrowForwards} /> 
 
 
             </div>
@@ -65,9 +67,24 @@ const homePage = () => {
     
    
 
+    mainImageDiv.addEventListener('mouseenter', ()=>{
+
+        
+        document.querySelector('.backArrow').style.visibility = 'visible'
+        document.querySelector('.forwardArrow').style.visibility = 'visible'
+
+    })
+
+    mainImageDiv.addEventListener('mouseleave', () => {
+
+        document.querySelector('.backArrow').style.visibility = 'hidden'
+        document.querySelector('.forwardArrow').style.visibility = 'hidden'
+
+    })
+
+
     
-    
-    console.log(restOf)
+ 
     
      
 

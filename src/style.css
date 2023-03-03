@@ -68,16 +68,27 @@
 }
 
 .backArrow {
+
 position:absolute;
 width:3.5rem;
 right:90%;
+visibility: hidden;
+border:2px solid white;
+border-radius: 15px;
 
 }
 
 .forwardArrow {
+
 position:absolute;
 width:3.5rem;
-left:90%
-
+left:90%;
+visibility: hidden;
+border:2px solid white;
+border-radius: 15px;
 
 }
+
+
+
+
