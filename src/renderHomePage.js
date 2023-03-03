@@ -39,6 +39,8 @@ const homePage = () => {
      const content = document.querySelector('#content')
      
      content.insertAdjacentHTML('afterbegin', homePageHtml)
+
+
      const mainImageDiv = document.querySelector('.mainImageDiv')
      const tinyImagePreview = document.querySelector('.tinyImagePreview')
     const imageArray = [] //image array that stores the images we will be showing in the main image div.
@@ -67,7 +69,7 @@ const homePage = () => {
     
    
 
-    mainImageDiv.addEventListener('mouseenter', ()=>{
+    mainImageDiv.addEventListener('mouseenter', ()=>{ //two following event listeners make the back or forward arrow visible when mouse enters or leaves mainimagediv
 
         
         document.querySelector('.backArrow').style.visibility = 'visible'
@@ -81,6 +83,20 @@ const homePage = () => {
         document.querySelector('.forwardArrow').style.visibility = 'hidden'
 
     })
+
+   const tinyImage = document.querySelectorAll('.tinyImagePreview img')
+
+    tinyImage.forEach((item)=>{item.addEventListener('mouseenter',(event) => {
+
+       event.target.style.border = '2px solid blue'
+    
+    })})
+
+    tinyImage.forEach((item)=>{item.addEventListener('mouseleave',(event) => {
+
+        event.target.style.border = 'none'
+    
+    })})
 
 
     
