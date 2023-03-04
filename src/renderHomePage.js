@@ -1,7 +1,7 @@
 import arrowBackwards from './images/arrowBack.png'
 import arrowForwards from './images/arrowForward.png'
 
-import { moveForward } from './ImageSlide'
+import { moveForward, moveBackward } from './ImageSlide'
 
 
 const homePage = () => {
@@ -69,7 +69,7 @@ const homePage = () => {
 
      }
     
-    const cloneImage = imageArray[0].cloneNode()
+    const cloneImage = imageArray[0].cloneNode() //clone first element in array so that when you append to tiny image div you have something to append to main image div
     mainImageDiv.append(cloneImage)
     imageArray.forEach((item)=>{tinyImagePreview.append(item)})
     
@@ -106,7 +106,8 @@ const homePage = () => {
     })})
 
 
-moveForward()    
+moveForward()
+moveBackward()    
  
     
      
