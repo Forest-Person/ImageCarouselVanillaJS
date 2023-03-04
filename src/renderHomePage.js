@@ -1,8 +1,12 @@
 import arrowBackwards from './images/arrowBack.png'
 import arrowForwards from './images/arrowForward.png'
 
+import { moveForward } from './ImageSlide'
+
 
 const homePage = () => {
+
+    const userPrompt = prompt("How many images would you like loaded?")
 
      const homePageHtml = `
      
@@ -45,7 +49,7 @@ const homePage = () => {
      const tinyImagePreview = document.querySelector('.tinyImagePreview')
     const imageArray = [] //image array that stores the images we will be showing in the main image div.
     
-     for(let i = 0; i<5; i++){
+     for(let i = 0; i<userPrompt; i++){ //for loop that uses sig on url with index name being i from for loop. Also dataset names are set by the i as well on each loop
 
         
         let url = `https://source.unsplash.com/random/500*500?sig=${i}`;
@@ -53,12 +57,13 @@ const homePage = () => {
 
  
         let image = document.createElement(`img`)
+        image.dataset.arrayNumber = i
         image.src = url;
         image.classList.add('randomImage')
         
         imageArray.push(image)
         
-        console.log(imageArray)
+        
         mainImageDiv.appendChild(imageArray[0]); //only the zeroth image will occupy the main image div.
         
 
@@ -99,7 +104,7 @@ const homePage = () => {
     })})
 
 
-    
+moveForward()    
  
     
      
