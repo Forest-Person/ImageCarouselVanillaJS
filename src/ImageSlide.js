@@ -20,8 +20,8 @@ arrowForward.addEventListener('click', ()=>{
     let tinyImageArray = [...document.querySelectorAll('.tinyImagePreview .randomImage')]
 
     
-    const lastItem = tinyImageArray.pop()
-    tinyImageArray.unshift(lastItem)
+    const lastItem = tinyImageArray.splice(0,1)
+    tinyImageArray.push(lastItem[0])
 
     tinyImagePreview.replaceChildren(...tinyImageArray)
 
