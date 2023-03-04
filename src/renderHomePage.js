@@ -64,13 +64,15 @@ const homePage = () => {
         imageArray.push(image)
         
         
-        mainImageDiv.appendChild(imageArray[0]); //only the zeroth image will occupy the main image div.
+        
         
 
      }
-
-    const restOf = imageArray.slice(1)///append the rest of the images to the tinyImagePreview div which will be below.
-    for(let item in restOf){tinyImagePreview.append(restOf[item])}
+    
+    const cloneImage = imageArray[0].cloneNode()
+    mainImageDiv.append(cloneImage)
+    imageArray.forEach((item)=>{tinyImagePreview.append(item)})
+    
     
    
 

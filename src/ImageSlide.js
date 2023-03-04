@@ -16,6 +16,7 @@ arrowForward.addEventListener('click', ()=>{
    
     let mainImageDiv = document.querySelector('.mainImageDiv')
     let mainImage = document.querySelector('.mainImageDiv .randomImage')
+    const tinyImageAppend = mainImage.cloneNode()
     let tinyImagePreview = document.querySelector('.tinyImagePreview')
     tinyImagePreview.appendChild(mainImage)
     let tinyImageArray = document.querySelectorAll('.tinyImagePreview .randomImage')
@@ -23,13 +24,6 @@ arrowForward.addEventListener('click', ()=>{
     mainImageDiv.appendChild(imageArray[0])
     
    
-
-    
-
-   
-
-    
-
 })
 
 }
