@@ -2,6 +2,7 @@ import arrowBackwards from './images/arrowBack.png'
 import arrowForwards from './images/arrowForward.png'
 
 import { moveForward, moveBackward } from './ImageSlide'
+import { slideSelection } from './slideSelector'
 
 
 const homePage = () => {
@@ -108,7 +109,7 @@ const homePage = () => {
 
 moveForward()
 moveBackward()    
- 
+slideSelection()
     
      
 
