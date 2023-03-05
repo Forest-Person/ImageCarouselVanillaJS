@@ -13,7 +13,14 @@ tinyImageDiv.addEventListener('click', (event)=>{
     const mainDiv = document.querySelector('.mainImageDiv')
     mainDiv.removeChild(mainDivImage)
     const cloneSelectNode = document.querySelector(`.tinyImagePreview [data-array-number = "${imageDataSetValue}"]`).cloneNode()
+
     mainDiv.appendChild(cloneSelectNode)
+    
+    let tinyImageArrayCopy = [...document.querySelectorAll('.tinyImagePreview .randomImage')]
+
+    const tinyArrayIndex = tinyImageArrayCopy.indexOf(event.target)
+
+    console.log(tinyArrayIndex, 'Tiny Image Array Index')
     }
     
 

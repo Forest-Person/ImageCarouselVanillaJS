@@ -12,13 +12,27 @@ const arrowForward = document.querySelector('.forwardArrow')//get the forward ar
 
 
 
-arrowForward.addEventListener('click', ()=>{
+arrowForward.addEventListener('click', (event)=>{
     const mainImageDiv = document.querySelector('.mainImageDiv')
     const tinyImagePreview = document.querySelector('.tinyImagepreview')
     
 
     let tinyImageArray = [...document.querySelectorAll('.tinyImagePreview .randomImage')]
 
+
+    const datasetArrayNumber = document.querySelector('.mainImageDiv .randomImage').dataset.arrayNumber 
+    //get array number stored as dataset arrayNumber of the main image div
+
+    const tinyImageIndex = tinyImageArray.findIndex(element => element.dataset.arrayNumber === datasetArrayNumber)
+
+    if(tinyImageIndex !== 0){ //if image isn't zeroth element in tinyimage array make sure when forward arrow is pressed that next element in array is next in slide show.
+
+      const lastElements = tinyImageArray.splice(tinyImageIndex,tinyImageArray.length)
+      tinyImageArray.unshift(...lastElements)
+      console.log(lastElements)
+    }
+
+   
     
     const lastItem = tinyImageArray.splice(0,1)
     tinyImageArray.push(lastItem[0])
@@ -29,7 +43,7 @@ arrowForward.addEventListener('click', ()=>{
 
     mainImageDiv.appendChild(tinyImageArray[0].cloneNode())
     
-    console.log(tinyImageArray)
+    
 
 
     
