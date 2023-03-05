@@ -14,7 +14,7 @@ const homePage = () => {
      <div class 'mainImageContainer'>
 
         <h1>Image Round-about</h1>
-        
+        <button type = "button" class = 'startStop'>Start/Stop</button>
 
 
         <div class = 'mainImageDiv'>
@@ -111,8 +111,27 @@ const homePage = () => {
 moveForward()
 moveBackward()    
 slideSelection()
+
+const startStopButton = document.querySelector('.startStop')
+
+let myInterval
+let timerSet = false  
+
+startStopButton.addEventListener('click',()=>{ //set timer going on button press or stop timer
+
+   if (timerSet === false){
+
+    myInterval = setInterval(timerForward,5000)
+    timerSet = true
+
+   }else{clearTimeout(myInterval)
+timerSet=false
+}
     
-     setInterval(timerForward,5000)
+
+})
+    
+     
 
 }
 
