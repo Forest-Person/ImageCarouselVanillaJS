@@ -26,9 +26,10 @@
 .mainImageDiv {
     position:relative;
     display:flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding-bottom: 5rem;
+    padding-bottom: 1rem;
+    margin:0;
 }
 
 .mainImageDiv .randomImage {
@@ -36,9 +37,10 @@
     
     
     max-width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     width: 40rem;
     height: 40rem;
+    padding:0;
    
 }
 
@@ -71,7 +73,7 @@
 
 position:absolute;
 width:3.5rem;
-right:90%;
+right:80%;
 visibility: hidden;
 border:2px solid white;
 border-radius: 15px;
@@ -82,7 +84,7 @@ border-radius: 15px;
 
 position:absolute;
 width:3.5rem;
-left:90%;
+left:80%;
 visibility: hidden;
 border:2px solid white;
 border-radius: 15px;

@@ -1,7 +1,7 @@
 import arrowBackwards from './images/arrowBack.png'
 import arrowForwards from './images/arrowForward.png'
 
-import { moveForward, moveBackward } from './ImageSlide'
+import { moveForward, moveBackward, timerForward } from './ImageSlide'
 import { slideSelection } from './slideSelector'
 
 
@@ -14,6 +14,7 @@ const homePage = () => {
      <div class 'mainImageContainer'>
 
         <h1>Image Round-about</h1>
+        
 
 
         <div class = 'mainImageDiv'>
@@ -111,7 +112,7 @@ moveForward()
 moveBackward()    
 slideSelection()
     
-     
+     setInterval(timerForward,5000)
 
 }
 
