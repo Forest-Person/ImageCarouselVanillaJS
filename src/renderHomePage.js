@@ -11,9 +11,9 @@ const homePage = () => {
 
      const homePageHtml = `
      
-     <div class 'mainImageContainer'>
+     <div class = 'mainImageContainer'>
 
-        <h1>Image Round-about</h1>
+        <h1>Image Round-About</h1>
         <button type = "button" class = 'startStop'>Start/Stop</button>
 
 
@@ -93,19 +93,7 @@ const homePage = () => {
 
     })
 
-   const tinyImage = document.querySelectorAll('.tinyImagePreview img')
-
-    tinyImage.forEach((item)=>{item.addEventListener('mouseenter',(event) => {
-
-       event.target.style.border = '2px solid blue'
-    
-    })})
-
-    tinyImage.forEach((item)=>{item.addEventListener('mouseleave',(event) => {
-
-        event.target.style.border = 'none'
-    
-    })})
+  
 
 
 moveForward()
